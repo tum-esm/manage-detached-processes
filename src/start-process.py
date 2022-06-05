@@ -1,3 +1,4 @@
+import json
 import os
 import subprocess
 
@@ -12,3 +13,6 @@ if os.path.isfile(STATE_FILE):
 else:
     p = subprocess.Popen([INTERPRETER_PATH, SCRIPT_PATH], stderr=subprocess.PIPE)
     print(f"Started background process with PID {p.pid}")
+
+    with open(STATE_FILE, "w") as f:
+        json.dump({"pid": p.pid}, f)
