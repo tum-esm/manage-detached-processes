@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "start-detached-processes"
+name = "manage-detached-processes"
 version = "0.1.0"
 description = ""
 authors = ["Moritz Makowski <moritz.makowski@tum.de>"]
